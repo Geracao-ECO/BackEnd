@@ -18,7 +18,7 @@ public class tema {
 	@NotBlank(message = "O atributo descricao é Obrigatória")
 	private String descricao;
 	
-	@NotBlank(message = "O atributo descricao é Obrigatória")
+	@NotBlank(message = "O atributo tipo assistencia é Obrigatória")
 	private String tipo_assistencia;
 
 	public Long getId() {
