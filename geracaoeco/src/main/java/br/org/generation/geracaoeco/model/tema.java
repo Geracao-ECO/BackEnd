@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table (name="tb_tema")
-public class tema {
+public class Tema {
 
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
@@ -45,6 +45,3 @@ public class tema {
 		this.tipo_assistencia = tipo_assistencia;
 	}
 }
-	
-	
-	
