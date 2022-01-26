@@ -1,4 +1,4 @@
-package br.org.generation.geracaoeco.Controller;
+package br.org.generation.geracaoeco.controller;
 
 import java.util.List;
 
