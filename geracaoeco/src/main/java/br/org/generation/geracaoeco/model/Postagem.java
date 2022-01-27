@@ -87,5 +87,13 @@ public class Postagem {
 	public void setRegiao(String regiao) {
 		this.regiao = regiao;
 	}
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 	
 }

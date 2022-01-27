@@ -21,10 +21,10 @@ public class Tema {
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = "O atributo descricao é Obrigatória")
+	@NotBlank(message = "O atributo descricao é obrigatória")
 	private String descricao;
 	
-	@NotBlank(message = "O atributo tipo assistencia é Obrigatória")
+	@NotBlank(message = "O atributo tipo assistencia é obrigatória")
 	private String tipo_assistencia;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -51,6 +51,10 @@ public class Tema {
 		return tipo_assistencia;
 	}
 
+	public void setTipo_assistencia(String tipo_assistencia) {
+		this.tipo_assistencia = tipo_assistencia;
+	}
+
 	public List<Postagem> getPostagem() {
 		return postagem;
 	}
@@ -58,8 +62,5 @@ public class Tema {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
-
-	public void setTipo_assistencia(String tipo_assistencia) {
-		this.tipo_assistencia = tipo_assistencia;
-	}
+	
 }
