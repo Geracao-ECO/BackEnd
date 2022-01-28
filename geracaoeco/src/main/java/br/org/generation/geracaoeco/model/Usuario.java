@@ -5,7 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "tb_usuario")
@@ -16,13 +18,15 @@ public class Usuario {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = " O campo Nome é obrigatório")
+	@NotBlank(message = " O campo Nome é obrigatório.")
 	private String nome;
 	
-	@NotBlank(message = "O campo Usuário é obrigatório")
+	@NotBlank(message = "O campo Usuário é obrigatório.")
+	@Email(message = "O campo Usuário deve ter um email válido.")
 	private String usuario;
 	
 	@NotBlank(message = "O campo Senha é obrigatório")
+	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
 	private String senha;
 	
 	@NotBlank(message = "O campo tipo usuário é obrigatório")
