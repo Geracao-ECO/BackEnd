@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -18,7 +19,7 @@ public class Usuario {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = " O campo Nome é obrigatório.")
+	@NotNull(message = " O campo Nome é obrigatório.")
 	private String nome;
 	
 	@NotBlank(message = "O campo Usuário é obrigatório.")
