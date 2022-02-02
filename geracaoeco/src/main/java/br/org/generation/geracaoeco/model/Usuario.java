@@ -35,6 +35,7 @@ public class Usuario {
 	
 	private String foto;
 
+
 	public Long getId() {
 		return id;
 	}
